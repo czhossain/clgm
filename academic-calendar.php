@@ -1,19 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "klust_db";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM calendar_events";
-$result = mysqli_query($conn, $sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,28 +63,6 @@ $result = mysqli_query($conn, $sql);
         <div class="container">
             <h2>Academic Calendar Events</h2>
 
-            <?php
-            if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='calendar-item'>
-                <h3>" . $row["title"] . "</h3>
-                <div class='registration-dates'>
-                    <div class='date-box'>
-                        <strong>Start Date</strong>
-                        <p>" . $row["start_date"] . "</p>
-                    </div>
-                    <div class='date-box'>
-                        <strong>End Date</strong>
-                        <p>" . $row["end_date"] . "</p>
-                    </div>
-                </div>
-                <p>" . $row["description"] . "</p>
-            </div>";
-                }
-            } else {
-                echo "<p>No calendar events available</p>";
-            }
-            ?>
                     <table>
                         <thead>
                             <tr>

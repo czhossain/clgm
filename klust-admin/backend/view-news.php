@@ -54,9 +54,9 @@ if (mysqli_num_rows($result) > 0) {
         <td>" . $row["id"] . "</td>
         <td>" . $row["title"] . "</td>
         <td>" . $row["image_url"] . "</td>
-        <td>" . $row["content"] . "</td>
-        <td>" . $row["date"] . "</td>
-        <td>" . $row["status"] . "</td>
+        <td>" . substr($row["content"], 0, 100) . "...</td>
+        <td>" . (isset($row["date"]) ? $row["date"] : 'N/A') . "</td>
+        <td>" . (isset($row["status"]) ? $row["status"] : 'N/A') . "</td>
         <td><a href='update-news-form.php?id=" . $row["id"] . "'>Update</a></td>
         <td><a href='delete-news.php?id=" . $row["id"] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">Delete</a></td>
     </tr>";

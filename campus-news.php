@@ -83,12 +83,10 @@ $result = mysqli_query($conn, $sql);
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<article class='news-card'>
                     <div class='news-image'>
-                        <img src='assets/images/campus-news/" . $row["image_url"] . "' alt='" . $row["title"] . "'>
+                        <img src='" . $row["image_url"] . "' alt='" . $row["title"] . "'>
                     </div>
                     <div class='news-content'>
-                        <span class='news-date'>" . $row["date"] . "</span>
                         <h3>" . $row["title"] . "</h3>
-                        <p>" . $row["content"] . "</p>
                     </div>
                 </article>";
                     }
