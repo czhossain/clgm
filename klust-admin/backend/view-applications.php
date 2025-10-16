@@ -58,8 +58,8 @@ if (mysqli_num_rows($result) > 0) {
         <td>" . $row["phone"] . "</td>
         <td>" . $row["program"] . "</td>
         <td>" . $row["application_date"] . "</td>
-        <td>" . $row["status"] . "</td>
-        <td><a href='update-application-form.php?id=" . $row["id"] . "'>Update</a></td>
+        <td>" . $row["STATUS"] . "</td>
+        <td><a href='delete-application.php?id=" . $row["id"] . "' onclick='return confirm(\"Are you sure you want to delete this application?\")'>Delete</a></td>
     </tr>";
     }
 } else {

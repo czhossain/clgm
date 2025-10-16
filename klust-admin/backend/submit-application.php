@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $application_date = date('Y-m-d');
     $status = 'Pending';
 
-    $sql = "INSERT INTO applications (student_name, email, phone, program, application_date, status) 
+    $sql = "INSERT INTO applications (student_name, email, phone, program, application_date, STATUS) 
             VALUES ('$student_name', '$email', '$phone', '$program', '$application_date', '$status')";
     
     mysqli_query($conn, $sql);
