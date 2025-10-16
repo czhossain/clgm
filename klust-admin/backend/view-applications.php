@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Applications</title>
+    <style>
+        body { font-family: Arial; margin: 0; padding: 20px; background: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #333; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: #0b2242; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:hover { background: #f9f9f9; }
+        a { color: #0b2242; text-decoration: none; padding: 5px 10px; }
+        a:hover { background: #0b2242; color: white; border-radius: 3px; }
+        .back-btn { display: inline-block; margin-bottom: 15px; padding: 10px 20px; background: #0b2242; color: white; border-radius: 3px; }
+        .back-btn:hover { background: #1a3a6e; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>All Applications</h2>
+    <a href="../manage-applications.html" class="back-btn">Back to Admin</a>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -46,3 +68,6 @@ if (mysqli_num_rows($result) > 0) {
 
 mysqli_close($conn);
 ?>
+</div>
+</body>
+</html>

@@ -19,7 +19,7 @@ $duration = $_POST['duration'];
 $description = $_POST['description'];
 $image_url = $_POST['image_url'];
 
-$sql = "UPDATE programs SET program_name='$program_name', level='$level', duration='$duration', description='$description', image_url='$image_url' WHERE id='$id'";
+$sql = "UPDATE programs SET program_name='$program_name', LEVEL='$level', duration='$duration', description='$description', image_url='$image_url' WHERE id='$id'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";

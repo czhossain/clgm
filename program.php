@@ -79,8 +79,9 @@ $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<div class='program-card'>
+                    <img src='" . $row["image_url"] . "' alt='" . $row["program_name"] . "'>
                     <h3>" . $row["program_name"] . "</h3>
-                    <p class='program-category'>" . $row["level"] . "</p>
+                    <p class='program-category'>" . $row["LEVEL"] . "</p>
                     <div class='program-info'>
                         <span>📅 " . $row["duration"] . "</span>
                     </div>
@@ -89,34 +90,6 @@ $result = mysqli_query($conn, $sql);
                     }
                 } else {
                     echo "<p>No programs available</p>";
-                }
-                ?>
-
-                <div class="program-card">
-                    <h3>Bachelor of Civil Engineering with Honours</h3>
-                    <p class="program-category">Engineering and Technology</p>
-                    <div class="program-info">
-                        <span>📅 4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Communication (Honours) in Integrated Marketing Communication</h3>
-                    <p class="program-category">Communication</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Communication (Hons) in Corporate Communication</h3>
-                    <p class="program-category">Communication</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
                 }
                 ?>
 

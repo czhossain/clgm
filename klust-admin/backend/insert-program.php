@@ -19,7 +19,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO programs (program_name, level, duration, description, image_url)
+$sql = "INSERT INTO programs (program_name, LEVEL, duration, description, image_url)
 VALUES ('$program_name', '$level', '$duration', '$description', '$image_url')";
 
 if ($conn->query($sql) === TRUE) {

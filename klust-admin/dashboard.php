@@ -47,28 +47,7 @@ include 'backend/dashboard-stats.php';
         
         <section class="recent">
             <h3>Recent Activity</h3>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Activity</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Oct 17, 2025</td>
-                    <td>New application submitted</td>
-                    <td>Pending</td>
-                </tr>
-                <tr>
-                    <td>Oct 16, 2025</td>
-                    <td>News article published</td>
-                    <td>Published</td>
-                </tr>
-                <tr>
-                    <td>Oct 15, 2025</td>
-                    <td>Calendar event added</td>
-                    <td>Active</td>
-                </tr>
-            </table>
+            <p>Activity logs will appear here</p>
         </section>
     </main>
     

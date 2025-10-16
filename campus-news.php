@@ -100,15 +100,6 @@ $result = mysqli_query($conn, $sql);
         </div>
     </section>
 
-            <div class="pagination">
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link">Next →</a>
-            </div>
-        </div>
-    </section>
-
     <section class="newsletter-section">
         <div class="container">
             <h2>Stay Updated</h2>
