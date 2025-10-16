@@ -25,17 +25,16 @@
 
         <section class="form-section">
             <h3>Add New Program</h3>
-            <form>
+            <form action="backend/insert-program.php" method="POST">
                 <label>Program Name:</label>
                 <input type="text" name="program_name" required>
 
                 <label>Level:</label>
                 <select name="level" required>
                     <option value="">Select Level</option>
-                    <option value="pre-university">Pre-University</option>
-                    <option value="undergraduate">Undergraduate</option>
-                    <option value="postgraduate">Postgraduate</option>
-                    <option value="short-course">Short Course</option>
+                    <option value="Pre-University">Pre-University</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
                 </select>
 
                 <label>Duration:</label>
@@ -44,55 +43,16 @@
                 <label>Description:</label>
                 <textarea name="description" rows="5" required></textarea>
 
+                <label>Image URL:</label>
+                <input type="text" name="image_url" placeholder="e.g., program-image.jpg">
+
                 <button type="submit">Add Program</button>
             </form>
         </section>
 
         <section class="table-section">
             <h3>All Programs</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Program Name</th>
-                        <th>Level</th>
-                        <th>Duration</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Bachelor of Business Administration</td>
-                        <td>Undergraduate</td>
-                        <td>3 Years</td>
-                        <td>
-                            <button class="btn-edit">Edit</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Diploma in Computer Science</td>
-                        <td>Undergraduate</td>
-                        <td>2 Years</td>
-                        <td>
-                            <button class="btn-edit">Edit</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Foundation in Arts</td>
-                        <td>Pre-University</td>
-                        <td>1 Year</td>
-                        <td>
-                            <button class="btn-edit">Edit</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <a href="backend/view-programs.php">View All Programs</a>
         </section>
     </main>
 

@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "klust_db";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM programs";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +39,14 @@
             <nav class="nav">
                 <a href="index.html">HOME</a>
                 <a href="about.html">ABOUT US</a>
-                <a href="program.html">PROGRAMS</a>
+                <a href="program.php">PROGRAMS</a>
                 <a href="admissions.html">ADMISSIONS</a>
                 <a href="contact.html">CONTACT US</a>
                 <details class="more-nav">
                     <summary>More</summary>
                     <div class="more-panel">
-                        <a href="campus-news.html">Campus News</a>
-                        <a href="academic-calendar.html">Academic Calendar</a>
+                        <a href="campus-news.php">Campus News</a>
+                        <a href="academic-calendar.php">Academic Calendar</a>
                         <a href="application-forms.html">Application Forms</a>
                         <a href="bursary.html">Bursary</a>
                         <a href="scholarship.html">Scholarships</a>
@@ -59,65 +75,22 @@
             <h2>Available Programs</h2>
             <div class="programs-grid">
 
-                <div class="program-card">
-                    <h3>Bachelor of Accountancy (Honours)</h3>
-                    <p class="program-category">Accounting</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<div class='program-card'>
+                    <h3>" . $row["program_name"] . "</h3>
+                    <p class='program-category'>" . $row["level"] . "</p>
+                    <div class='program-info'>
+                        <span>📅 " . $row["duration"] . "</span>
                     </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Agricultural Science (Plantation Management) (Honours)</h3>
-                    <p class="program-category">Agricultural Science</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Arts (Hons) in English for Professional Communication</h3>
-                    <p class="program-category">Language Studies</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Arts (Hons) Teaching of English to Speakers of Other Languages (TESOL)</h3>
-                    <p class="program-category">Education</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Business Administration (Honours) in E-Commerce</h3>
-                    <p class="program-category">Business Administration</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Business Administration (Hons)</h3>
-                    <p class="program-category">Business Administration</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
+                    <p>" . $row["description"] . "</p>
+                </div>";
+                    }
+                } else {
+                    echo "<p>No programs available</p>";
+                }
+                ?>
 
                 <div class="program-card">
                     <h3>Bachelor of Civil Engineering with Honours</h3>
@@ -144,80 +117,9 @@
                     <p class="program-category">Communication</p>
                     <div class="program-info">
                         <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
+                }
+                ?>
 
-                <div class="program-card">
-                    <h3>Bachelor of Electronics Engineering with Honours</h3>
-                    <p class="program-category">Engineering and Technology</p>
-                    <div class="program-info">
-                        <span>📅 4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Information Technology (Hons) in Multimedia</h3>
-                    <p class="program-category">Information Technology</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Landscape Architecture</h3>
-                    <p class="program-category">Architecture Studies</p>
-                    <div class="program-info">
-                        <span>📅 4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Mechanical Engineering with Honours</h3>
-                    <p class="program-category">Engineering and Technology</p>
-                    <div class="program-info">
-                        <span>📅 4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Quantity Surveying (Hons)</h3>
-                    <p class="program-category">Quantity Surveying</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Science (Architectural Studies)</h3>
-                    <p class="program-category">Architecture Studies</p>
-                    <div class="program-info">
-                        <span>📅 3 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
-
-                <div class="program-card">
-                    <h3>Bachelor of Science (Honours) in Economics and Finance</h3>
-                    <p class="program-category">Business Administration</p>
-                    <div class="program-info">
-                        <span>📅 3-4 years</span>
-                        <span>📚 Full Time</span>
-                    </div>
-                    <button class="btn-more">MORE INFO</button>
-                </div>
             </div>
         </div>
     </section>
@@ -298,3 +200,6 @@
     </footer>
 </body>
 </html>
+<?php
+mysqli_close($conn);
+?>

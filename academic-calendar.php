@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "klust_db";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM calendar_events";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +39,14 @@
             <nav class="nav">
                 <a href="index.html">HOME</a>
                 <a href="about.html">ABOUT US</a>
-                <a href="program.html">PROGRAMS</a>
+                <a href="program.php">PROGRAMS</a>
                 <a href="admissions.html">ADMISSIONS</a>
                                 <a href="contact.html">CONTACT US</a>
                                 <details class="more-nav">
                                     <summary>More</summary>
                                     <div class="more-panel">
-                                        <a href="campus-news.html">Campus News</a>
-                                        <a href="academic-calendar.html">Academic Calendar</a>
+                                        <a href="campus-news.php">Campus News</a>
+                                        <a href="academic-calendar.php">Academic Calendar</a>
                                         <a href="application-forms.html">Application Forms</a>
                                         <a href="bursary.html">Bursary</a>
                                         <a href="scholarship.html">Scholarships</a>
@@ -61,77 +77,30 @@
 
     <section class="calendar-section">
         <div class="container">
-            <h2>Undergraduate and Postgraduate Programmes</h2>
+            <h2>Academic Calendar Events</h2>
 
-            <!-- June Intake 2025 -->
-            <div class="calendar-item">
-                <h3>June Intake 2025</h3>
-                <div class="registration-dates">
-                    <div class="date-box">
-                        <strong>New Intake</strong>
-                        <p>Registration: 2 July 2025</p>
+            <?php
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='calendar-item'>
+                <h3>" . $row["title"] . "</h3>
+                <div class='registration-dates'>
+                    <div class='date-box'>
+                        <strong>Start Date</strong>
+                        <p>" . $row["start_date"] . "</p>
                     </div>
-                    <div class="date-box">
-                        <strong>Returning Students</strong>
-                        <p>Registration: 3 and 4 July 2025</p>
-                    </div>
-                </div>
-                <h4>June Semester 2025</h4>
-                <div class="calendar-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Week</th>
-                                <th>Activity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>7-Jul-25</td><td>13-Jul-25</td><td>1</td><td>Lecture</td></tr>
-                            <tr><td>14-Jul-25</td><td>20-Jul-25</td><td>2</td><td>Lecture</td></tr>
-                            <tr><td>21-Jul-25</td><td>27-Jul-25</td><td>3</td><td>Lecture</td></tr>
-                            <tr><td>28-Jul-25</td><td>3-Aug-25</td><td>4</td><td>Lecture</td></tr>
-                            <tr><td>4-Aug-25</td><td>10-Aug-25</td><td>5</td><td>Lecture</td></tr>
-                            <tr><td>11-Aug-25</td><td>17-Aug-25</td><td>6</td><td>Lecture</td></tr>
-                            <tr><td>18-Aug-25</td><td>24-Aug-25</td><td>7</td><td>Lecture</td></tr>
-                            <tr class="break-week"><td>25-Aug-25</td><td>31-Aug-25</td><td>8</td><td><strong>BREAK</strong></td></tr>
-                            <tr><td>1-Sep-25</td><td>7-Sep-25</td><td>9</td><td>Lecture</td></tr>
-                            <tr><td>8-Sep-25</td><td>14-Sep-25</td><td>10</td><td>Lecture</td></tr>
-                            <tr><td>15-Sep-25</td><td>21-Sep-25</td><td>11</td><td>Lecture</td></tr>
-                            <tr><td>22-Sep-25</td><td>28-Sep-25</td><td>12</td><td>Lecture</td></tr>
-                            <tr><td>29-Sep-25</td><td>5-Oct-25</td><td>13</td><td>Lecture</td></tr>
-                            <tr><td>6-Oct-25</td><td>12-Oct-25</td><td>14</td><td>Lecture</td></tr>
-                            <tr class="exam-week"><td>13-Oct-25</td><td>2-Nov-25</td><td>15-17</td><td><strong>Final Examination</strong></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="important-dates">
-                    <h4>Important Dates</h4>
-                    <ul>
-                        <li><strong>Last Day for Late Registration:</strong> 11 July 2025</li>
-                        <li><strong>Last day to submit an Application for Graduation:</strong> 22 September 2025</li>
-                        <li><strong>Last Day for Postponement of Semester:</strong> 11 July 2025</li>
-                        <li><strong>Inter-Semester Break:</strong> 3 November 2025 - 25 November 2025</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- October/November Intake 2025/26 -->
-            <div class="calendar-item">
-                <h3>October/November Intake 2025/26</h3>
-                <div class="registration-dates">
-                    <div class="date-box">
-                        <strong>New Intake</strong>
-                        <p>Registration: 26 November 2025</p>
-                    </div>
-                    <div class="date-box">
-                        <strong>Returning Students</strong>
-                        <p>Registration: 27 and 28 November 2025</p>
+                    <div class='date-box'>
+                        <strong>End Date</strong>
+                        <p>" . $row["end_date"] . "</p>
                     </div>
                 </div>
-                <h4>October/November Semester 2025/26</h4>
-                <div class="calendar-table">
+                <p>" . $row["description"] . "</p>
+            </div>";
+                }
+            } else {
+                echo "<p>No calendar events available</p>";
+            }
+            ?>
                     <table>
                         <thead>
                             <tr>
@@ -168,98 +137,10 @@
                         <li><strong>Last Day for Postponement of Semester:</strong> 5 December 2025</li>
                         <li><strong>Inter-Semester Break:</strong> 30 March 2026 - 21 April 2026</li>
                     </ul>
-                </div>
-            </div>
+                }
+            }
+            ?>
 
-            <!-- March Intake 2026 -->
-            <div class="calendar-item">
-                <h3>March Intake 2026</h3>
-                <div class="registration-dates">
-                    <div class="date-box">
-                        <strong>New Intake</strong>
-                        <p>Registration: 22 April 2026</p>
-                    </div>
-                    <div class="date-box">
-                        <strong>Returning Students</strong>
-                        <p>Registration: 23 and 24 April 2026</p>
-                    </div>
-                </div>
-                <h4>March Semester 2026</h4>
-                <div class="calendar-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Week</th>
-                                <th>Activity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>27-Apr-26</td><td>3-May-26</td><td>1</td><td>Lecture</td></tr>
-                            <tr><td>4-May-26</td><td>10-May-26</td><td>2</td><td>Lecture</td></tr>
-                            <tr><td>11-May-26</td><td>17-May-26</td><td>3</td><td>Lecture</td></tr>
-                            <tr><td>18-May-26</td><td>24-May-26</td><td>4</td><td>Lecture</td></tr>
-                            <tr><td>25-May-26</td><td>31-May-26</td><td>5</td><td>Lecture</td></tr>
-                            <tr><td>1-Jun-26</td><td>7-Jun-26</td><td>6</td><td>Lecture</td></tr>
-                            <tr><td>8-Jun-26</td><td>14-Jun-26</td><td>7</td><td>Lecture</td></tr>
-                            <tr class="break-week"><td>15-Jun-26</td><td>21-Jun-26</td><td>8</td><td><strong>BREAK</strong></td></tr>
-                            <tr><td>22-Jun-26</td><td>28-Jun-26</td><td>9</td><td>Lecture</td></tr>
-                            <tr><td>29-Jun-26</td><td>5-Jul-26</td><td>10</td><td>Lecture</td></tr>
-                            <tr><td>6-Jul-26</td><td>12-Jul-26</td><td>11</td><td>Lecture</td></tr>
-                            <tr><td>13-Jul-26</td><td>19-Jul-26</td><td>12</td><td>Lecture</td></tr>
-                            <tr><td>20-Jul-26</td><td>26-Jul-26</td><td>13</td><td>Lecture</td></tr>
-                            <tr><td>27-Jul-26</td><td>2-Aug-26</td><td>14</td><td>Lecture</td></tr>
-                            <tr class="exam-week"><td>3-Aug-26</td><td>23-Aug-26</td><td>15-17</td><td><strong>Final Examination</strong></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="important-dates">
-                    <h4>Important Dates</h4>
-                    <ul>
-                        <li><strong>Last Day for Late Registration:</strong> 1 May 2026</li>
-                        <li><strong>Last day to submit an Application for Graduation:</strong> 13 July 2026</li>
-                        <li><strong>Last Day for Postponement of Semester:</strong> 1 May 2026</li>
-                        <li><strong>Semester Break:</strong> 24 August 2026 - Onward</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Foundation Programmes Section -->
-            <div class="foundation-section">
-                <h2>Foundation Programmes</h2>
-                <div class="calendar-item">
-                    <h3>June Intake 2025 - Foundation</h3>
-                    <div class="registration-dates">
-                        <div class="date-box">
-                            <strong>New Intake</strong>
-                            <p>Registration: 30 July 2025</p>
-                        </div>
-                    </div>
-                    <h4>June Semester 2025</h4>
-                    <p>Foundation programme follows a condensed calendar with intensive study periods.</p>
-                    <div class="important-dates">
-                        <h4>Important Information</h4>
-                        <ul>
-                            <li>Duration: 1 year (2 semesters)</li>
-                            <li>Intensive learning schedule</li>
-                            <li>Regular assessments and progress tracking</li>
-                            <li>Pathway to degree programmes</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="calendar-item">
-                    <h3>October/November Intake 2025 - Foundation</h3>
-                    <div class="registration-dates">
-                        <div class="date-box">
-                            <strong>New Intake</strong>
-                            <p>Registration: To be announced</p>
-                        </div>
-                    </div>
-                    <h4>October/November Semester 2025</h4>
-                    <p>Foundation programme calendar will be updated closer to the intake date.</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -364,3 +245,6 @@
         <!-- No JavaScript. All content is visible by default. -->
 </body>
 </html>
+<?php
+mysqli_close($conn);
+?>
