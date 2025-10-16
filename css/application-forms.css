@@ -42,11 +42,9 @@
     padding: 30px 20px;
     border-radius: 8px;
     text-align: center;
-    transition: all 0.3s;
 }
 
 .form-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     background: white;
 }
@@ -83,7 +81,6 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: bold;
-    transition: background 0.3s;
 }
 
 .download-btn:hover {
@@ -121,7 +118,6 @@
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
-    transition: all 0.3s;
 }
 
 .btn-primary {

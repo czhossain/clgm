@@ -63,7 +63,6 @@
     border-radius: 8px;
     margin-bottom: 15px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
 }
 
 .accordion-item:hover {
@@ -87,7 +86,6 @@
     font-weight: 600;
     color: #1a2f4d;
     text-align: left;
-    transition: background-color 0.3s ease;
 }
 
 .accordion-header:hover {
@@ -102,17 +100,15 @@
 .accordion-icon {
     font-size: 24px;
     font-weight: 300;
-    transition: transform 0.3s ease;
 }
 
 .accordion-item.active .accordion-icon {
-    transform: rotate(180deg);
+    content: '−';
 }
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
 }
 
 .intake-info {
@@ -287,11 +283,9 @@
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .note-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 

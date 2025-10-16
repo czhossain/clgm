@@ -85,7 +85,6 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: color 0.3s;
     white-space: nowrap;
 }
 
@@ -117,7 +116,6 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 3px;
-    transition: background 0.3s;
     white-space: nowrap;
     letter-spacing: 0.5px;
 }
@@ -213,7 +211,6 @@ body {
     font-family: inherit;
     color: #2b2b2b;
     background: #f9fafb;
-    transition: border-color 0.3s, background 0.3s;
 }
 
 .form-group input:focus,
@@ -243,7 +240,6 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 4px;
-    transition: background 0.3s;
     letter-spacing: 0.5px;
     align-self: flex-start;
     margin-top: 10px;
@@ -296,7 +292,6 @@ body {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
-    transition: background 0.3s;
 }
 
 .social-btn:hover {
@@ -313,7 +308,6 @@ body {
     font-size: 14px;
     color: #333333;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .footer-links a:hover {
