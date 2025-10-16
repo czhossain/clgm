@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - KLUST</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body class="login-page">
+    <main class="login-container">
+        <form class="login-form" method="POST" action="backend/login.php">
+            <img src="../assets/images/about/logo-klust.png" alt="KLUST Logo" width="80">
+            <h2>KLUST Admin Login</h2>
+            
+            <label>Username:</label>
+            <input type="text" name="username" required>
+            
+            <label>Password:</label>
+            <input type="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</body>
+</html>

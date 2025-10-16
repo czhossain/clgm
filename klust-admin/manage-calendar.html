@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Calendar - KLUST Admin</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <header>
+        <h1>KLUST Admin Panel</h1>
+        <a href="index.html">Logout</a>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="manage-news.html">Campus News</a>
+        <a href="manage-programs.html">Programs</a>
+        <a href="manage-calendar.html" class="active">Calendar</a>
+        <a href="manage-applications.html">Applications</a>
+    </nav>
+
+    <main>
+        <h2>Manage Academic Calendar</h2>
+
+        <section class="form-section">
+            <h3>Add New Event</h3>
+            <form>
+                <label>Event Title:</label>
+                <input type="text" name="title" required>
+
+                <label>Start Date:</label>
+                <input type="date" name="start_date" required>
+
+                <label>End Date:</label>
+                <input type="date" name="end_date" required>
+
+                <label>Description:</label>
+                <textarea name="description" rows="3" required></textarea>
+
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h3>All Calendar Events</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Event Title</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Registration for Semester 1</td>
+                        <td>2025-02-01</td>
+                        <td>2025-02-15</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mid-Semester Break</td>
+                        <td>2025-04-10</td>
+                        <td>2025-04-17</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Final Examinations</td>
+                        <td>2025-06-15</td>
+                        <td>2025-06-30</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KLUST Admin Panel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

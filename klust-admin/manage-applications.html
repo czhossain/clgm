@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Applications - KLUST Admin</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <header>
+        <h1>KLUST Admin Panel</h1>
+        <a href="index.html">Logout</a>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="manage-news.html">Campus News</a>
+        <a href="manage-programs.html">Programs</a>
+        <a href="manage-calendar.html">Calendar</a>
+        <a href="manage-applications.html" class="active">Applications</a>
+    </nav>
+
+    <main>
+        <h2>Manage Applications</h2>
+
+        <section class="table-section">
+            <h3>All Submitted Applications</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Program</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ahmad Bin Ali</td>
+                        <td>ahmad@email.com</td>
+                        <td>Business Administration</td>
+                        <td>2025-01-20</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Update</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Siti Nurhaliza</td>
+                        <td>siti@email.com</td>
+                        <td>Computer Science</td>
+                        <td>2025-01-18</td>
+                        <td>Approved</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Update</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lee Wei Ming</td>
+                        <td>leewei@email.com</td>
+                        <td>Foundation in Arts</td>
+                        <td>2025-01-15</td>
+                        <td>Rejected</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Update</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tan Mei Ling</td>
+                        <td>tanmei@email.com</td>
+                        <td>Engineering</td>
+                        <td>2025-01-12</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KLUST Admin Panel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

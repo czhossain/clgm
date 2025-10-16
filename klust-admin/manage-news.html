@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Campus News - KLUST Admin</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <header>
+        <h1>KLUST Admin Panel</h1>
+        <a href="index.html">Logout</a>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="manage-news.html" class="active">Campus News</a>
+        <a href="manage-programs.html">Programs</a>
+        <a href="manage-calendar.html">Calendar</a>
+        <a href="manage-applications.html">Applications</a>
+    </nav>
+
+    <main>
+        <h2>Manage Campus News</h2>
+
+        <section class="form-section">
+            <h3>Add New News Article</h3>
+            <form>
+                <label>Title:</label>
+                <input type="text" name="title" required>
+
+                <label>Image URL:</label>
+                <input type="text" name="image" required>
+
+                <label>Content:</label>
+                <textarea name="content" rows="5" required></textarea>
+
+                <label>Date:</label>
+                <input type="date" name="date" required>
+
+                <button type="submit">Add News</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h3>All News Articles</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>KLUST Partners with Pukyong University</td>
+                        <td>2025-01-15</td>
+                        <td>Published</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ASEAN-China AI Convention</td>
+                        <td>2025-01-10</td>
+                        <td>Published</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Vocational Education Global Conference</td>
+                        <td>2025-01-05</td>
+                        <td>Draft</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KLUST Admin Panel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
