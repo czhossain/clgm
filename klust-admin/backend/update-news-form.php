@@ -53,13 +53,13 @@ if (mysqli_num_rows($result) > 0) {
         <textarea name='content' rows='5' required>" . $row["content"] . "</textarea>
 
         <label>Date: </label>
-        <input type='date' name='date' required value='" . $row["date"] . "' />
+        <input type='date' name='date' required value='" . $row["DATE"] . "' />
 
         <label>Status: </label>
         <select name='status' required>
             <option value=''>Select Status</option>
-            <option value='Draft' " . ($row["status"] == "Draft" ? "selected" : "") . ">Draft</option>
-            <option value='Published' " . ($row["status"] == "Published" ? "selected" : "") . ">Published</option>
+            <option value='Draft' " . ($row["STATUS"] == "Draft" ? "selected" : "") . ">Draft</option>
+            <option value='Published' " . ($row["STATUS"] == "Published" ? "selected" : "") . ">Published</option>
         </select>
 
         <input type='submit' value='Submit' />

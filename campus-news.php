@@ -11,7 +11,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM campus_news WHERE status='Published'";
+$sql = "SELECT * FROM campus_news WHERE STATUS='Published'";
 $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ $result = mysqli_query($conn, $sql);
             </nav>
             <div class="header-right">
                 <span class="phone">📞 : 019 388 3435</span>
-                <a href="admissions.html" class="apply-btn">APPLY NOW</a>
+                <a href="apply-online.php" class="apply-btn">APPLY NOW</a>
             </div>
         </div>
     </header>

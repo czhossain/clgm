@@ -19,7 +19,7 @@ $content = $_POST['content'];
 $date = $_POST['date'];
 $status = $_POST['status'];
 
-$sql = "UPDATE campus_news SET title='$title', image_url='$image_url', content='$content', date='$date', status='$status' WHERE id='$id'";
+$sql = "UPDATE campus_news SET title='$title', image_url='$image_url', content='$content', DATE='$date', STATUS='$status' WHERE id='$id'";
 
 mysqli_query($conn, $sql);
 mysqli_close($conn);

@@ -19,7 +19,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO campus_news (title, image_url, content, date, status)
+$sql = "INSERT INTO campus_news (title, image_url, content, DATE, STATUS)
 VALUES ('$title', '$image_url', '$content', '$date', '$status')";
 
 $conn->query($sql);
