@@ -1,3 +1,6 @@
+<?php
+include 'backend/dashboard-stats.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
     </header>
     
     <nav>
-        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="dashboard.php" class="active">Dashboard</a>
         <a href="manage-news.html">Campus News</a>
         <a href="manage-programs.html">Programs</a>
         <a href="manage-calendar.html">Calendar</a>
@@ -25,19 +28,19 @@
         
         <section class="stats">
             <div class="stat-box">
-                <h3>45</h3>
+                <h3><?php echo $total_programs; ?></h3>
                 <p>Total Programs</p>
             </div>
             <div class="stat-box">
-                <h3>12</h3>
+                <h3><?php echo $total_news; ?></h3>
                 <p>News Articles</p>
             </div>
             <div class="stat-box">
-                <h3>8</h3>
+                <h3><?php echo $total_events; ?></h3>
                 <p>Calendar Events</p>
             </div>
             <div class="stat-box">
-                <h3>23</h3>
+                <h3><?php echo $total_applications; ?></h3>
                 <p>Applications</p>
             </div>
         </section>

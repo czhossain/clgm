@@ -20,7 +20,7 @@ $sql = "SELECT id, username FROM admin_users WHERE username = '$user' AND passwo
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  header("Location: ../dashboard.html");
+  header("Location: ../dashboard.php");
 } else {
   echo "Wrong username or password";
 }
