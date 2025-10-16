@@ -21,14 +21,9 @@ $image_url = $_POST['image_url'];
 
 $sql = "UPDATE programs SET program_name='$program_name', LEVEL='$level', duration='$duration', description='$description', image_url='$image_url' WHERE id='$id'";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Record updated successfully";
-    echo "<br><a href='view-programs.php'>Back to Program List</a>";
-} else {
-    echo "Error updating record: " . mysqli_error($conn);
-    echo "<br><a href='view-programs.php'>Back to Program List</a>";
-}
-
+mysqli_query($conn, $sql);
 mysqli_close($conn);
 
+header("Location: view-programs.php");
+exit();
 ?>

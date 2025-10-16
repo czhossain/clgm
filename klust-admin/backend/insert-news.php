@@ -22,12 +22,9 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO campus_news (title, image_url, content, date, status)
 VALUES ('$title', '$image_url', '$content', '$date', '$status')";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
+$conn->query($sql);
 $conn->close();
 
+header("Location: ../backend/view-news.php");
+exit();
 ?>

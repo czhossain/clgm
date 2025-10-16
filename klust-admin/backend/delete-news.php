@@ -15,12 +15,9 @@ if (!$conn) {
 $id = $_GET['id'];
 $sql = "DELETE FROM campus_news WHERE id='$id'";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . mysqli_error($conn);
-}
-
+mysqli_query($conn, $sql);
 mysqli_close($conn);
 
+header("Location: ../backend/view-news.php");
+exit();
 ?>
