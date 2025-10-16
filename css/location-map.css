@@ -1,0 +1,22 @@
+/* location-map.css */
+.hero {
+  background: linear-gradient(rgba(26,47,77,0.85), rgba(26,47,77,0.85));
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero h2 { font-size: 36px; }
+.hero p { opacity: 0.95; }
+
+.map-embed { border: 1px solid #e5e8ef; border-radius: 8px; overflow: hidden; }
+.map-actions { margin-top: 12px; }
+.btn { background: #1a2f4d; color: #fff; padding: 10px 14px; border-radius: 4px; text-decoration: none; display: inline-block; }
+.btn:hover { background: #0b2242; }
+
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.directions ul { padding-left: 18px; }
+.note { margin-top: 10px; font-size: 0.95rem; color: #2a3d5c; }
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 28px; }
+}

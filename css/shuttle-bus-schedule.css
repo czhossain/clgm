@@ -1,0 +1,81 @@
+.intro {
+  padding: 40px 0;
+  background: #f9f9f9;
+}
+.intro p {
+  color: #555;
+  font-size: 16px;
+}
+.download {
+  margin-top: 12px;
+}
+.download .btn-primary {
+  display: inline-block;
+  background: #1a2f4d;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.notes {
+  padding: 50px 0;
+}
+.notes h3 {
+  color: #1a2f4d;
+  margin-bottom: 10px;
+}
+.notes ul {
+  padding-left: 18px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.routes {
+  padding: 50px 0;
+}
+.routes h3 {
+  color: #1a2f4d;
+  margin-bottom: 12px;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #eee;
+}
+.table-wrap th,
+.table-wrap td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+.table-wrap thead th {
+  background: #eef3f9;
+  color: #1a2f4d;
+}
+
+.internal {
+  background: #f9f9f9;
+  padding: 40px 0;
+}
+.internal h3 {
+  color: #1a2f4d;
+  margin-bottom: 8px;
+}
+.internal p {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .table-wrap th,
+  .table-wrap td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

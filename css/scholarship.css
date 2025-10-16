@@ -1,0 +1,38 @@
+/* scholarship.css */
+.hero {
+  background: linear-gradient(rgba(26, 47, 77, 0.85), rgba(26, 47, 77, 0.85));
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero h2 { font-size: 36px; }
+.hero p { margin-top: 6px; opacity: 0.95; }
+
+.overview .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e8ef;
+  border-radius: 8px;
+  padding: 16px;
+}
+.card h3 { margin-top: 0; color: #0b2242; }
+.btn-link { display: inline-block; margin-top: 8px; color: #1a2f4d; text-decoration: underline; }
+
+.eligibility ul { padding-left: 18px; }
+
+.apply .docs { padding-left: 18px; }
+.apply .cta { display: flex; gap: 10px; margin-top: 10px; }
+.btn { background: #1a2f4d; color: #fff; padding: 10px 14px; border-radius: 4px; text-decoration: none; display: inline-block; }
+.btn:hover { background: #0b2242; }
+.btn.alt { background: #4f6d99; }
+
+.contact a { color: #1a2f4d; text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 28px; }
+  .apply .cta { flex-direction: column; }
+}
