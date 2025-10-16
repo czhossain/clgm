@@ -157,7 +157,7 @@
                                 $result = mysqli_query($conn, $sql);
                                 if ($result) {
                                     while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . htmlspecialchars($row["program_name"]) . "'>" . htmlspecialchars($row["program_name"]) . "</option>";
+                                        echo "<option value='" . $row["program_name"] . "'>" . $row["program_name"] . "</option>";
                                     }
                                 }
                                 mysqli_close($conn);

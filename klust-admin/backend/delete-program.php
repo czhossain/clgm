@@ -15,9 +15,11 @@ if (!$conn) {
 $id = $_GET['id'];
 $sql = "DELETE FROM programs WHERE id='$id'";
 
-mysqli_query($conn, $sql);
-mysqli_close($conn);
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
 
-header("Location: ../backend/view-programs.php");
-exit();
+mysqli_close($conn);
 ?>

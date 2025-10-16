@@ -22,9 +22,11 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO programs (program_name, LEVEL, duration, description, image_url)
 VALUES ('$program_name', '$level', '$duration', '$description', '$image_url')";
 
-$conn->query($sql);
-$conn->close();
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-header("Location: ../backend/view-programs.php");
-exit();
+$conn->close();
 ?>

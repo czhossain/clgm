@@ -21,9 +21,11 @@ $status = $_POST['status'];
 
 $sql = "UPDATE campus_news SET title='$title', image_url='$image_url', content='$content', DATE='$date', STATUS='$status' WHERE id='$id'";
 
-mysqli_query($conn, $sql);
-mysqli_close($conn);
+if (mysqli_query($conn, $sql)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
+}
 
-header("Location: view-news.php");
-exit();
+mysqli_close($conn);
 ?>
