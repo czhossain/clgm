@@ -23,12 +23,6 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $total_news = $row['total'];
 
-// Count calendar events
-$sql = "SELECT COUNT(*) as total FROM calendar_events";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$total_events = $row['total'];
-
 // Count applications
 $sql = "SELECT COUNT(*) as total FROM applications";
 $result = mysqli_query($conn, $sql);

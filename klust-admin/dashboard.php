@@ -19,7 +19,6 @@ include 'backend/dashboard-stats.php';
         <a href="dashboard.php" class="active">Dashboard</a>
         <a href="manage-news.html">Campus News</a>
         <a href="manage-programs.html">Programs</a>
-        <a href="manage-calendar.html">Calendar</a>
         <a href="manage-applications.html">Applications</a>
     </nav>
     
@@ -34,10 +33,6 @@ include 'backend/dashboard-stats.php';
             <div class="stat-box">
                 <h3><?php echo $total_news; ?></h3>
                 <p>News Articles</p>
-            </div>
-            <div class="stat-box">
-                <h3><?php echo $total_events; ?></h3>
-                <p>Calendar Events</p>
             </div>
             <div class="stat-box">
                 <h3><?php echo $total_applications; ?></h3>

@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $sql);
                                     <summary>More</summary>
                                     <div class="more-panel">
                                         <a href="campus-news.php">Campus News</a>
-                                        <a href="academic-calendar.php">Academic Calendar</a>
+                                        <a href="academic-calendar.html">Academic Calendar</a>
                                         <a href="application-forms.html">Application Forms</a>
                                         <a href="bursary.html">Bursary</a>
                                         <a href="scholarship.html">Scholarships</a>
