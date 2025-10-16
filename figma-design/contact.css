@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'Roboto', Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+.header {
+    background: #ffffff;
+    padding: 12px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    content: url('https://malaysiaeducation.com.my/wp-content/uploads/2020/11/KLUST-Official-Logo-Horizontal-1.png');
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    line-height: 1.2;
+}
+
+.logo-text h1 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0b2242;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.logo-text p {
+    font-size: 10px;
+    font-weight: 700;
+    color: #0b2242;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.logo-text span {
+    font-size: 8px;
+    color: #666666;
+    display: block;
+    margin-top: 3px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    color: #0b2242;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.phone {
+    font-size: 13px;
+    color: #2b2b2b;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.apply-btn {
+    background: #0b2242;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.apply-btn:hover {
+    background: #142d54;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.hero-contact {
+    background: #2c4158;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-contact h2 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.contact-form-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.form-wrapper h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 14px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333333;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0b2242;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.send-btn {
+    background: #0b2242;
+    color: #ffffff;
+    border: none;
+    padding: 16px 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+    letter-spacing: 0.5px;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.send-btn:hover {
+    background: #142d54;
+}
+
+.footer {
+    background: #ffffff;
+    padding: 50px 0 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-bottom: 35px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #000000;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    background: #0b2242;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.social-btn:hover {
+    background: #142d54;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0b2242;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #666666;
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .form-wrapper {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-contact h2 {
+        font-size: 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .form-wrapper {
+        padding: 25px;
+    }
+
+    .form-wrapper h3 {
+        font-size: 24px;
+    }
+}
