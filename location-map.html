@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/location-map.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container">
@@ -25,27 +27,28 @@
         <a href="about.html">ABOUT US</a>
         <a href="program.php">PROGRAMS</a>
         <a href="admissions.html">ADMISSIONS</a>
-                <a href="contact.html">CONTACT US</a>
-                <details class="more-nav">
-                  <summary>More</summary>
-                  <div class="more-panel">
-                    <a href="campus-news.php">Campus News</a>
-                    <a href="academic-calendar.html">Academic Calendar</a>
-                    <a href="application-forms.html">Application Forms</a>
-                    <a href="bursary.html">Bursary</a>
-                    <a href="scholarship.html">Scholarships</a>
-                    <a href="facilities.html">Facilities</a>
-                    <a href="shuttle-bus-schedule.html">Shuttle Bus</a>
-                    <a href="location-map.html">Location Map</a>
-                  </div>
-                </details>
-  </nav>
-  <div class="header-right">
-    <span class="phone">📞 : 019 388 3435</span>
-    <a href="apply-online.php" class="apply-btn">APPLY NOW</a>
-  </div>
-</div>
-</header>  <section class="hero">
+        <a href="contact.html">CONTACT US</a>
+        <details class="more-nav">
+          <summary>More</summary>
+          <div class="more-panel">
+            <a href="campus-news.php">Campus News</a>
+            <a href="academic-calendar.html">Academic Calendar</a>
+            <a href="application-forms.html">Application Forms</a>
+            <a href="bursary.html">Bursary</a>
+            <a href="scholarship.html">Scholarships</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="shuttle-bus-schedule.html">Shuttle Bus</a>
+            <a href="location-map.html">Location Map</a>
+          </div>
+        </details>
+      </nav>
+      <div class="header-right">
+        <span class="phone">📞 : 019 388 3435</span>
+        <a href="apply-online.php" class="apply-btn">APPLY NOW</a>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
     <div class="container">
       <h2>Location & Map</h2>
       <p>Find us easily by car or public transport.</p>
@@ -55,10 +58,13 @@
   <section class="map">
     <div class="container">
       <div class="map-embed">
-        <iframe title="KLUST Map" src="https://www.google.com/maps?q=Infrastructure+University+Kuala+Lumpur&output=embed" width="100%" height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="KLUST Map"
+          src="https://www.google.com/maps?q=Infrastructure+University+Kuala+Lumpur&output=embed" width="100%"
+          height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="map-actions">
-        <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Infrastructure+University+Kuala+Lumpur">Open in Google Maps</a>
+        <a class="btn" target="_blank" rel="noopener"
+          href="https://maps.google.com/?q=Infrastructure+University+Kuala+Lumpur">Open in Google Maps</a>
       </div>
     </div>
   </section>
@@ -76,80 +82,83 @@
         <ul>
           <li>By KTM Komuter: Stop at KTM Serdang. Use KLUST Shuttle to campus.</li>
           <li>By MRT: Stop at MRT Serdang Jaya. Use KLUST Shuttle to campus.</li>
-          <li>By Car: Set destination to "Infrastructure University Kuala Lumpur". Visitor parking available at designated areas.</li>
+          <li>By Car: Set destination to "Infrastructure University Kuala Lumpur". Visitor parking available at
+            designated areas.</li>
         </ul>
-        <p class="note">Shuttle bus operates on weekdays and is not available on public holidays. See the <a href="shuttle-bus-schedule.html">Shuttle Bus Schedule</a> for details.</p>
+        <p class="note">Shuttle bus operates on weekdays and is not available on public holidays. See the <a
+            href="shuttle-bus-schedule.html">Shuttle Bus Schedule</a> for details.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <p>Phone: 019 388 3435</p>
-        <p>Email: info@klust.edu.my</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon location-icon"></div>
+        <h3>LOCATION</h3>
+        <p>Kuala Lumpur University of<br>Science & Technology</p>
+        <a href="#">View on Map</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon phone-icon"></div>
+        <h3>PHONE</h3>
+        <p>+60 17 388 3435<br>General Enquiries</p>
+        <a href="tel:+60173883435">Call Now</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon mail-icon"></div>
+        <h3>EMAIL</h3>
+        <p>info@klust.edu.my<br>Admissions & Information</p>
+        <a href="mailto:info@klust.edu.my">Send Email</a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>CONTACT FORM</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="FIRST NAME" required>
+          <input type="text" placeholder="LAST NAME" required>
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="EMAIL" required>
+          <input type="text" placeholder="SUBJECT" required>
+        </div>
+        <textarea placeholder="Description" rows="5" required></textarea>
+        <button type="submit" class="send-btn">Send</button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <h3>Contact Information</h3>
+        <p>+60 17 388 3435</p>
         <p>Kuala Lumpur, Malaysia</p>
       </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About Us</a></p>
-        <p><a href="program.php">Programs</a></p>
-        <p><a href="admissions.html">Admissions</a></p>
-        <p><a href="contact.html">Contact</a></p>
-      </div>
-      <div class="footer-section">
+      <div class="footer-info">
         <h3>Follow Us</h3>
-        <div class="social">
-          <a href="#" class="social-icon">f</a>
-          <a href="#" class="social-icon">t</a>
-          <a href="#" class="social-icon">i</a>
-          <a href="#" class="social-icon">in</a>
+        <div class="social-links">
+          <a href="#" class="social-link facebook"></a>
+          <a href="#" class="social-link twitter"></a>
+          <a href="#" class="social-link instagram"></a>
+          <a href="#" class="social-link linkedin"></a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <h3>Quick Links</h3>
+        <p>About Us<br>Programs<br>Admissions<br>Campus Life</p>
+      </div>
+      <div class="footer-info">
+        <h3>Excellence Rating</h3>
+        <div class="rating-icons">
+          <div class="star-icon"></div>
+          <div class="star-icon"></div>
+          <div class="star-icon"></div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+
+    <div class="copyright">
       <p>&copy; 2025 Kuala Lumpur University of Science & Technology (KLUST). All rights reserved.</p>
     </div>
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-section contact-info">
-          <h3>Contact Us</h3>
-          <p>
-            KLUST College of Logistics and Green Manufacturing<br>
-            Jalan Ikram-Uniten, 43000 Kajang, Selangor, Malaysia
-          </p>
-          <p>
-            Phone: +60 3-1234 5678<br>
-            Email: info@klust.edu.my
-          </p>
-        </div>
-        <div class="footer-section quick-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="program.php">Programs</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="scholarship.html">Scholarships</a></li>
-            <li><a href="campus-news.php">Campus News</a></li>
-          </ul>
-        </div>
-        <div class="footer-section contact-form">
-          <h3>Get in Touch</h3>
-          <form action="#" method="post" onsubmit="return false;">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 KLUST College of Logistics and Green Manufacturing</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook">Fb</a>
-          <a href="#" aria-label="Twitter">Tw</a>
-          <a href="#" aria-label="LinkedIn">In</a>
-        </div>
-      </div>
-    </footer>
+  </footer>

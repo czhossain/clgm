@@ -403,11 +403,13 @@
 
 .form-row {
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form-group label {
@@ -420,11 +422,14 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
+    width: 100%;
+    max-width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,

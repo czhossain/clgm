@@ -172,45 +172,78 @@
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h3>Contact Us</h3>
-                <p>
-                    KLUST College of Logistics and Green Manufacturing<br>
-                    Jalan Ikram-Uniten, 43000 Kajang, Selangor, Malaysia
-                </p>
-                <p>
-                    Phone: +60 3-1234 5678<br>
-                    Email: info@klust.edu.my
-                </p>
+    <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon location-icon"></div>
+                <h3>LOCATION</h3>
+                <p>Kuala Lumpur University of<br>Science & Technology</p>
+                <a href="location-map.html">View on Map</a>
             </div>
-            <div class="footer-section quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="program.php">Programs</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="scholarship.html">Scholarships</a></li>
-                    <li><a href="campus-news.php">Campus News</a></li>
-                </ul>
+            <div class="contact-item">
+                <div class="contact-icon phone-icon"></div>
+                <h3>PHONE</h3>
+                <p>+60 17 388 3435<br>General Enquiries</p>
+                <a href="tel:+60173883435">Call Now</a>
             </div>
-            <div class="footer-section contact-form">
-                <h3>Get in Touch</h3>
-                <form action="#" method="post" onsubmit="return false;">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+            <div class="contact-item">
+                <div class="contact-icon mail-icon"></div>
+                <h3>EMAIL</h3>
+                <p>info@klust.edu.my<br>Admissions & Information</p>
+                <a href="mailto:info@klust.edu.my">Send Email</a>
             </div>
         </div>
+
+        <div class="contact-form">
+            <h2>CONTACT FORM</h2>
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="FIRST NAME" required>
+                    <input type="text" placeholder="LAST NAME" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="EMAIL" required>
+                    <input type="text" placeholder="SUBJECT" required>
+                </div>
+                <textarea placeholder="Description" rows="5" required></textarea>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 KLUST College of Logistics and Green Manufacturing</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook">Fb</a>
-                <a href="#" aria-label="Twitter">Tw</a>
-                <a href="#" aria-label="LinkedIn">In</a>
+            <div class="footer-info">
+                <h3>Contact Information</h3>
+                <p>+60 17 388 3435</p>
+                <p>Kuala Lumpur, Malaysia</p>
             </div>
+            <div class="footer-info">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook"></a>
+                    <a href="#" class="social-link twitter"></a>
+                    <a href="#" class="social-link instagram"></a>
+                    <a href="#" class="social-link linkedin"></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h3>Quick Links</h3>
+                <p><a href="about.html" style="color:#bdc3c7; text-decoration:none;">About Us</a><br>
+                   <a href="program.php" style="color:#bdc3c7; text-decoration:none;">Programs</a><br>
+                   <a href="admissions.html" style="color:#bdc3c7; text-decoration:none;">Admissions</a><br>
+                   <a href="campus-news.php" style="color:#bdc3c7; text-decoration:none;">Campus News</a></p>
+            </div>
+            <div class="footer-info">
+                <h3>Excellence Rating</h3>
+                <div class="rating-icons">
+                    <div class="star-icon"></div>
+                    <div class="star-icon"></div>
+                    <div class="star-icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Kuala Lumpur University of Science & Technology (KLUST). All rights reserved.</p>
         </div>
     </footer>
 </body>
